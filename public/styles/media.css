@@ -1,0 +1,137 @@
+/* responsive style changes */
+
+@media (max-width: 1600px) {
+  /* creating more space for project cards by adjusting margin of a container */
+  div.projects {
+    margin: 0 1rem;
+  }
+}
+
+@media (max-width: 1400px) {
+  /* adjusting margin for about section */
+  div.about-content {
+    margin: 0 5rem;
+  }
+  /* adjusting cards to create more space */
+  div.card {
+    margin: 0 2rem;
+  }
+  div.card-text {
+    padding: 1rem;
+  }
+  h3.card-heading {
+    margin-bottom: 10px;
+  }
+  div.card-buttons {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 1170px) {
+  /* adjusting margon for about section */
+  div.about-content {
+    margin: 0 2rem;
+  }
+  /* changing project section from nowrap to wrap to fit cards into view port */
+  div.projects-content {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  div.card {
+    margin: 2rem;
+  }
+
+  div.card-img img {
+    max-height: 250px;
+  }
+}
+
+@media (max-width: 1000px) {
+  /* changing project section flex from row to column */
+  section#projects {
+    justify-content: flex-start;
+  }
+  div.projects {
+    margin: 1rem;
+  }
+  div.projects-content {
+    align-items: center;
+    flex-direction: column;
+  }
+  /* giving last card margin bottom to create separation between sections */
+  div.projects-content:last-child {
+    margin-bottom: 100px;
+  }
+  /* positioning section heading to center and giving it some margin top */
+  div.projects-heading h2 {
+    margin-top: 50px;
+    margin-bottom: 0;
+    text-align: center;
+  }
+  /* adjusting card styling */
+  div.card {
+    margin: 0;
+    margin-top: 3rem;
+  }
+  /* cards are no longer same height */
+  div.card-text {
+    height: auto;
+  }
+  div.card:nth-of-type(2n) {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 800px) {
+  /* changing about section flex from row to column. Reverse to get img on top */
+  div.about-content {
+    align-items: center;
+    flex-direction: column-reverse;
+    margin: 0 2rem;
+  }
+  /* adjusting styling in about section */
+  div.about-text {
+    margin-top: 50px
+  }
+
+  div.about-content div.about-text {
+    align-items: center;
+    width: 98%;
+  }
+
+  div.about-content div.about-img img {
+    height: 150px;
+    width: 150px;
+  }
+}
+
+@media (max-width: 740px) {
+  /* giving smaller margin to text in index page */
+  div.index-content {
+    margin: 0 2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  /* making footer heading smaller */
+  h3.footer-heading {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 400px) {
+  /* making text in about section smaller to better fit into screens */
+  div.about-text h2 {
+    font-size: 1.2rem;
+  }
+  div.about-text p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 350px) {
+  /* getting index content and scroll-down closer together */
+  div.index-content p {
+    margin-bottom: 50px;
+  }
+}

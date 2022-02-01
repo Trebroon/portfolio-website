@@ -1,0 +1,73 @@
+/* index page styling */
+div.index-content {
+  margin: 0 4rem;
+  margin-bottom: 180px
+}
+
+/* styling for paragraf under index page heading */
+div.index-content p {
+  font-size: 1.4rem;
+  letter-spacing: 0.1rem;
+  margin-top: 50px;
+}
+
+div.scroll-down {
+  align-items: flex-end;
+  display: flex;
+  justify-content: flex-end;
+}
+
+div.scroll-down p {
+  animation: down-up 1.5s 5.2s ease-in-out infinite;
+  font-size: 1rem;
+  font-weight: 600;
+  rotate: 90deg;
+}
+
+/* backgroung image for index section */
+#index {
+  background: url('../imgs/index-background.jpg');
+  background-size: cover;
+}
+/* delays for initial animation after page loads */
+.init-animation1 {
+  animation: hi-fade-in 0.5s 0.5s ease-in forwards;
+  opacity: 0;
+}
+
+.init-animation2 {
+  animation: hi-fade-in 0.5s 1.5s ease-in forwards;
+  opacity: 0;
+}
+
+.init-animation3 {
+  animation: hi-fade-in 0.5s 2.5s ease-in forwards;
+  opacity: 0;
+}
+
+.init-animation4 {
+  animation: hi-fade-in 0.5s 3.5s ease-in forwards;
+  opacity: 0;
+}
+
+.init-animation5 {
+  animation: hi-fade-in 0.5s 3.8s ease-in forwards;
+  opacity: 0;
+}
+
+.init-animation6 {
+  animation: hi-fade-in 0.5s 4.2s ease-in forwards;
+  opacity: 0;
+}
+
+@keyframes hi-fade-in {
+  0% {}
+  70% { opacity: 0.7 }
+  100% { opacity: 1 }
+}
+
+@keyframes down-up {
+  0% {}
+  50% { transform: translateX(40px);}
+
+}

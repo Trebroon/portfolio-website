@@ -1,0 +1,102 @@
+/* styling for projects section */
+/* setting background to be gradient and
+   adjusting height to by no less than 100 vh but more if needed
+ */
+section#projects {
+  background: rgb(0,0,0);
+  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(24,24,24,1), rgba(0,0,0,1) 100%); 
+  height: auto;
+  min-height: 100vh;
+}
+/* container for projects */
+div.projects {
+  margin: 0 10rem;
+}
+
+div.projects-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+div.projects-content:last-child {
+  margin-bottom: 100px;
+}
+
+/* margins for section heading */
+div.projects-heading h2 {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+/* project card styling */
+div.card {
+  box-shadow: 0px 0px 30px 10px rgba(0,0,0,0.8);
+  border: 1px solid rgb(19, 19, 19);
+  border-radius: 2%;
+  max-width: 450px;
+  margin: 0 2rem;
+  overflow: hidden;
+  background-color: #1d1d1df6;
+  width: 100%;
+}
+
+/* project img styling */
+div.card-img img {
+  height: 100%;
+  max-height: 250px;
+  object-fit: cover;
+
+}
+
+/* card heading */
+h3.card-heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* cards text section */
+div.card-text {
+  border-top: 1px solid #CA3E47;
+  color: #fffffff1;
+  display:flex;
+  flex-direction: column;
+  height: 220px;
+  /* margin: 0 auto; */
+  padding: 1.5rem;
+  position: relative;
+  top: -3px;
+}
+
+/* container for card buttons */
+div.card-buttons {
+  align-items: flex-end;
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  margin-bottom: .5rem;
+  height: 100%;
+  width: 100%
+}
+
+/* card buttons styling */
+a.card-button {
+  box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.5);
+  background-color: #414141 ;
+  border-radius: 5%;
+  color: #fffffff1;
+  padding: .8rem;
+  transition: .2s ease-in;
+  height: 1.2rem;
+  text-align: center;
+  width: 6rem;
+}
+
+a.card-button:nth-of-type(2) {
+  margin-left: 3rem;
+}
+
+a.card-button:hover,
+a.card-button:focus {
+  background-color: #CA3E47;
+}

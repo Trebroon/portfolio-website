@@ -1,0 +1,101 @@
+#hamburger-icon {
+  margin: 50px auto;
+  display: none;
+  cursor: pointer;
+  z-index: 999;
+}
+
+#hamburger-icon div {
+  width: 35px;
+  height: 2px;
+  background-color: #CA3E47;
+  margin: 6px 0;
+  transition: 0.4s;
+  z-index: 100;
+}
+
+/* transforming hamburger divs to form X when clicked */
+.open .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+  transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.open .bar2 {
+  opacity: 0;
+}
+
+.open .bar3 {
+  -webkit-transform: rotate(45deg) translate(-6px, -8px);
+  transform: rotate(45deg) translate(-6px, -8px);
+}
+
+/* mobile menu styling */
+.mobile-menu {
+  display: none;
+  font-size: 2.5rem;
+  font-weight: 600;
+  height: 80vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+}
+
+ul.mobile-menu li {
+  margin: 3rem;
+  text-align: center;
+}
+
+ul.mobile-menu li a {
+  color: #ffffffe5;
+  transition: all 0.2s ease-in;
+  border-bottom: 3px solid #CA3E47;
+}
+
+ul.mobile-menu li a:hover {
+  font-size: 2.6rem;
+  padding-bottom: 5px;
+}
+
+/* displaying mobile menu */
+.open .mobile-menu {
+  align-items: center;
+  animation: menu-drop-in 0.4s ease forwards;
+  background-color: rgba(0, 0, 0, 0.90);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* animation showing the mobile menu */
+@keyframes menu-drop-in {
+  0% {}
+  70% { 
+    transform: translateY(110px);
+  }
+  100% {
+    transform: translateY(100px);
+  }
+}
+
+/* Displaying hamburger icon and hiding pc navbar under 1000px  */
+@media (max-width: 1000px) {
+  nav.navbar {
+    display: none;
+  }
+
+  #hamburger-icon {
+    display: inline-block;
+    margin: 0 auto;
+    position: fixed;
+    top: 30px;
+    left: 90%;
+    width: 100%;
+  }
+}
+/* adjusting postion */
+@media (max-width: 450px) {
+  #hamburger-icon {
+    left: 85%;
+  }
+}

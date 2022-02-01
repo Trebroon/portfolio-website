@@ -1,0 +1,47 @@
+/* footer styling */
+footer.footer {
+  align-items: center;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  justify-content:flex-start;
+  margin-top: 80px;
+  width: 100%;
+}
+
+/* footer heading */
+h3.footer-heading {
+  font-size: 2rem;
+}
+
+/* container for contant links */
+div.contacts {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+/* displaying contanct links horizontaly */
+ul.contact-links {
+  display: inline-flex;
+}
+
+/* styling for contact links */
+a.contact-link {
+  font-size: 2.5rem;
+  color: #ffffffe5;
+  text-decoration: none;
+  margin: 0 1rem;
+  transition: all .3s ease;
+}
+
+a.contact-link:hover,
+a.contact-link:focus {
+  color: #CA3E47;
+}
+
+/* copyright top and bottom margins */
+div.copyright {
+  margin: 2rem 0;
+}
