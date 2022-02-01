@@ -1,7 +1,6 @@
 /* index page styling */
 div.index-content {
   margin: 0 4rem;
-  margin-bottom: 180px
 }
 
 /* styling for paragraf under index page heading */
@@ -9,19 +8,6 @@ div.index-content p {
   font-size: 1.4rem;
   letter-spacing: 0.1rem;
   margin-top: 50px;
-}
-
-div.scroll-down {
-  align-items: flex-end;
-  display: flex;
-  justify-content: flex-end;
-}
-
-div.scroll-down p {
-  animation: down-up 1.5s 5.2s ease-in-out infinite;
-  font-size: 1rem;
-  font-weight: 600;
-  rotate: 90deg;
 }
 
 /* backgroung image for index section */
@@ -64,10 +50,4 @@ div.scroll-down p {
   0% {}
   70% { opacity: 0.7 }
   100% { opacity: 1 }
-}
-
-@keyframes down-up {
-  0% {}
-  50% { transform: translateX(40px);}
-
 }
