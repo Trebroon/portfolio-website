@@ -13,9 +13,6 @@
     margin: 0 5rem;
   }
   /* adjusting cards to create more space */
-  div.card {
-    margin: 0 2rem;
-  }
   div.card-text {
     padding: 1rem;
   }
