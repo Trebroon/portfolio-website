@@ -15,7 +15,8 @@ div.projects {
 
 div.projects-content {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 div.projects-content:last-child {
@@ -35,6 +36,7 @@ div.card {
   border-radius: 2%;
   max-width: 450px;
   margin: 0 2rem;
+  margin-bottom: 50px;
   overflow: hidden;
   background-color: #1d1d1df6;
   width: 100%;
