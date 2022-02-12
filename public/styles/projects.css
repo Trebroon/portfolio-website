@@ -17,6 +17,7 @@ div.projects-content {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  height: auto;
 }
 
 div.projects-content:last-child {

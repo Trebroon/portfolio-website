@@ -82,7 +82,8 @@ nav.navbar a {
   transition: all 0.3s ease-in;
 }
 
-nav.navbar a:hover {
+nav.navbar a:hover,
+nav.navbar a:focus {
   border-bottom: 3px solid;
   color: #CA3E47;
   font-size: 1.3rem;
