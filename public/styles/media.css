@@ -1,5 +1,55 @@
 /* responsive style changes */
 
+/* 4k resolution */
+@media (min-width: 3840px) {
+  /* navbar */
+  nav.navbar a {
+    font-size: 3rem;
+  }
+  nav.navbar a:hover,
+  nav.navbar a:focus {
+    font-size: 3.2rem;
+  }
+  /* sections headings */
+  h2 {
+    font-size: 5rem;
+  }
+  /* index page */
+  h1 {
+    font-size: 6.5rem;
+  }
+  div.index-content p {
+    font-size: 3rem;
+  }
+  /* projects section */
+  div.projects-heading h2 {
+    margin: 10rem;
+  }
+  div.card {
+    margin: 23rem 20rem;
+    transform: scale(2.1);
+  }
+  /* about section */
+  div.about-text p {
+    font-size: 3rem;
+    line-height: 3.3rem;
+  }
+  div.about-content div.about-img img {
+    margin-right: 20rem;
+    transform: scale(2.3)
+  }
+  /* footer */
+  h3.footer-heading {
+    font-size: 4rem;
+  }
+  a.contact-link {
+    font-size: 5rem;
+  }
+  div.copyright p {
+    font-size: 2.5rem;
+  }
+}
+
 @media (max-width: 1600px) {
   /* creating more space for project cards by adjusting margin of a container */
   div.projects {
