@@ -26,22 +26,19 @@
 </head>
 <body>
   <div class="container">
-    <!-- navbar -->
-    <nav class="navbar">
-      <a href="#index" class="nav-link">Home</a>
-      <a href="#projects" class="nav-link">Projects</a>
-      <a href="#about" class="nav-link">About Me</a>
-    </nav>
-    <!-- mobile navbar -->
-    <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
-      <div class="bar1"></div>
-      <div class="bar2"></div>
-      <div class="bar3"></div>
-      <ul class="mobile-menu fade">
-        <li><a href="#index" class="nav-link">Home</a></li>
-        <li><a href="#projects" class="nav-link">Projects</a></li>
-        <li><a href="#about" class="nav-link">About Me</a></li>
-      </ul>
+    <!-- navbar container -->
+    <div class="navbar">
+      <!-- hamburger icon -->
+      <input type="checkbox" class="side-menu" id="side-menu">
+      <label for="side-menu" class="hamb"><span class="hamb-line"></span></label>
+      <!-- navbar -->
+      <nav class="nav">
+        <ul class="menu">
+          <li><a href="#index">Home</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#about">About Me</a></li>
+        </ul>
+      </nav>
     </div>
     <!-- index secction -->
     <section id="index" class="section">
