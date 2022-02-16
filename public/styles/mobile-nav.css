@@ -1,101 +1,150 @@
-#hamburger-icon {
-  margin: 50px auto;
-  display: none;
-  cursor: pointer;
-  z-index: 999;
-}
-
-#hamburger-icon div {
-  width: 35px;
-  height: 2px;
-  background-color: #CA3E47;
-  margin: 6px 0;
-  transition: 0.4s;
+/* mobile menu styleing  */
+.nav {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  text-align: center;
+  width: 100%;
   z-index: 100;
 }
 
-/* transforming hamburger divs to form X when clicked */
-.open .bar1 {
-  -webkit-transform: rotate(-45deg) translate(-6px, 6px);
-  transform: rotate(-45deg) translate(-6px, 6px);
+.menu {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.open .bar2 {
-  opacity: 0;
+.menu li {
+  margin: 3rem;
 }
 
-.open .bar3 {
-  -webkit-transform: rotate(45deg) translate(-6px, -8px);
-  transform: rotate(45deg) translate(-6px, -8px);
-}
-
-/* mobile menu styling */
-.mobile-menu {
-  display: none;
+.menu li a {
+  color: #ffffffe5;
   font-size: 2.5rem;
   font-weight: 600;
-  height: 80vh;
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 100vw;
-}
-
-ul.mobile-menu li {
-  margin: 3rem;
-  text-align: center;
-}
-
-ul.mobile-menu li a {
-  color: #ffffffe5;
   transition: all 0.2s ease-in;
   border-bottom: 3px solid #CA3E47;
+  transition: all 0.2s ease-in;
 }
 
-ul.mobile-menu li a:hover {
+.menu a:hover {
   font-size: 2.6rem;
   padding-bottom: 5px;
 }
 
-/* displaying mobile menu */
-.open .mobile-menu {
-  align-items: center;
-  animation: menu-drop-in 0.4s ease forwards;
-  background-color: rgba(0, 0, 0, 0.90);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.nav {
+  max-height: 0;
+  transition: max-height .5s ease-out;
 }
 
-/* animation showing the mobile menu */
-@keyframes menu-drop-in {
-  0% {}
-  70% { 
-    transform: translateY(110px);
-  }
-  100% {
-    transform: translateY(100px);
-  }
+/* hamburger icon */
+.hamb {
+  cursor: pointer;
+  float: right;
+  padding: 40px 20px;
+  position: fixed;
+  top: 30px;
+  left: 85%;
+  z-index: 1000;
 }
 
-/* Displaying hamburger icon and hiding pc navbar under 1000px  */
-@media (max-width: 1000px) {
-  nav.navbar {
-    display: none;
-  }
+.hamb-line {
+  background: #CA3E47;
+  display: block;
+  height: 2px;
+  position: relative;
+  width: 24px;
+}
 
-  #hamburger-icon {
-    display: inline-block;
-    margin: 0 auto;
+.hamb-line::before,
+.hamb-line::after {
+  background: #CA3E47;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.hamb-line::before {
+  top: 5px;
+}
+
+.hamb-line::after {
+  top: -5px;
+}
+
+.side-menu {
+  display: none;
+}
+
+/* toggle menu icon */
+/* transformation from hamburger to X */
+.side-menu:checked ~ nav {
+  max-height: 100%;
+}
+/* setting middle line to transparent */
+.side-menu:checked ~ .hamb .hamb-line {
+  background: transparent;
+}
+
+.side-menu:checked ~ .hamb .hamb-line::before {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+.side-menu:checked ~ .hamb .hamb-line::after {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+/* toggling between mobile and desktop menu */
+@media(min-width: 1000px) {
+  /* styling for desktop menu */
+  .nav {
+    display: block;
+    background: none;
+    max-height: fit-content;
+    left: 71%;
+    font-weight: 600;
     position: fixed;
-    top: 30px;
-    left: 90%;
+    top: 50px;
+    z-index: 100;
     width: 100%;
   }
-}
-/* adjusting postion */
-@media (max-width: 450px) {
-  #hamburger-icon {
-    left: 85%;
+
+  .menu {
+    display: block;
+  }
+  
+  .menu li {
+    float: left;
+    margin: 0
+  }
+
+  .menu li a {
+    border-bottom: none;  
+    color: #ffffffe5;
+    font-size: 1.2rem;
+    margin-right: 2rem;
+    transition: all 0.3s ease-in;
+  }
+  
+  .menu li a:hover,
+  .menu li a:focus {
+    border-bottom: 3px solid;
+    color: #CA3E47;
+    font-size: 1.25rem;
+    padding-bottom: 5px;
+  }
+  /* hidding hamburger icon */
+  .hamb {
+    display: none;
   }
 }

@@ -3,11 +3,12 @@
 /* 4k resolution */
 @media (min-width: 3840px) {
   /* navbar */
-  nav.navbar a {
+  ul.menu li a {
     font-size: 3rem;
+    padding-top: 5rem;
   }
-  nav.navbar a:hover,
-  nav.navbar a:focus {
+  ul.menu li a:hover,
+  ul.menu li a:focus {
     font-size: 3.2rem;
   }
   /* sections headings */
@@ -167,6 +168,10 @@
 }
 
 @media (max-width: 400px) {
+  /* adjusting menu icon slightly to the left */
+  .hamb {
+    left: 80%;
+  }
   /* making text in about section smaller to better fit into screens */
   div.about-text h2 {
     font-size: 1.2rem;

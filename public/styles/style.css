@@ -64,28 +64,3 @@ section.section {
   justify-content: center;
   width: 100%;
 }
-
-/* pc navbar styling  */
-nav.navbar {
-  left: 71%;
-  font-weight: 600;
-  position: fixed;
-  top: 50px;
-  z-index: 100;
-  width: 100%;
-}
-
-nav.navbar a {
-  color: #ffffffe5;
-  font-size: 1.2rem;
-  margin-right: 2rem;
-  transition: all 0.3s ease-in;
-}
-
-nav.navbar a:hover,
-nav.navbar a:focus {
-  border-bottom: 3px solid;
-  color: #CA3E47;
-  font-size: 1.3rem;
-  padding-bottom: 5px;
-}
